@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EC93C3F292A88E3001FB96E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC93C3E292A88E3001FB96E /* Book.swift */; };
+		7EC93C41292A8A61001FB96E /* Book + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC93C40292A8A61001FB96E /* Book + SwiftUI.swift */; };
 		7EFE460628FB032400F73E30 /* BookshelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE460528FB032400F73E30 /* BookshelfApp.swift */; };
-		7EFE460828FB032400F73E30 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE460728FB032400F73E30 /* ContentView.swift */; };
+		7EFE460828FB032400F73E30 /* BookshelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE460728FB032400F73E30 /* BookshelfView.swift */; };
 		7EFE460A28FB032500F73E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFE460928FB032500F73E30 /* Assets.xcassets */; };
 		7EFE460E28FB032500F73E30 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFE460D28FB032500F73E30 /* Preview Assets.xcassets */; };
+		7EFE461528FB043C00F73E30 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE461428FB043C00F73E30 /* BookRow.swift */; };
+		7EFE461728FB057F00F73E30 /* BookDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE461628FB057E00F73E30 /* BookDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EC93C3E292A88E3001FB96E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		7EC93C40292A8A61001FB96E /* Book + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book + SwiftUI.swift"; sourceTree = "<group>"; };
 		7EFE460228FB032400F73E30 /* Bookshelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookshelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFE460528FB032400F73E30 /* BookshelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfApp.swift; sourceTree = "<group>"; };
-		7EFE460728FB032400F73E30 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7EFE460728FB032400F73E30 /* BookshelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfView.swift; sourceTree = "<group>"; };
 		7EFE460928FB032500F73E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EFE460B28FB032500F73E30 /* Bookshelf.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bookshelf.entitlements; sourceTree = "<group>"; };
 		7EFE460D28FB032500F73E30 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7EFE461428FB043C00F73E30 /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
+		7EFE461628FB057E00F73E30 /* BookDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EC93C3D292A88B6001FB96E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7EC93C3E292A88E3001FB96E /* Book.swift */,
+				7EC93C40292A8A61001FB96E /* Book + SwiftUI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7EFE45F928FB032400F73E30 = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +70,10 @@
 			isa = PBXGroup;
 			children = (
 				7EFE460528FB032400F73E30 /* BookshelfApp.swift */,
-				7EFE460728FB032400F73E30 /* ContentView.swift */,
+				7EFE460728FB032400F73E30 /* BookshelfView.swift */,
+				7EFE461428FB043C00F73E30 /* BookRow.swift */,
+				7EFE461628FB057E00F73E30 /* BookDetailView.swift */,
+				7EC93C3D292A88B6001FB96E /* Models */,
 				7EFE460928FB032500F73E30 /* Assets.xcassets */,
 				7EFE460B28FB032500F73E30 /* Bookshelf.entitlements */,
 				7EFE460C28FB032500F73E30 /* Preview Content */,
@@ -97,7 +117,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					7EFE460128FB032400F73E30 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -139,8 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EFE460828FB032400F73E30 /* ContentView.swift in Sources */,
+				7EC93C41292A8A61001FB96E /* Book + SwiftUI.swift in Sources */,
+				7EFE461728FB057F00F73E30 /* BookDetailView.swift in Sources */,
+				7EFE460828FB032400F73E30 /* BookshelfView.swift in Sources */,
 				7EFE460628FB032400F73E30 /* BookshelfApp.swift in Sources */,
+				7EC93C3F292A88E3001FB96E /* Book.swift in Sources */,
+				7EFE461528FB043C00F73E30 /* BookRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +204,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -238,6 +263,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -262,8 +288,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Bookshelf/Bookshelf.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bookshelf/Preview Content\"";
 				DEVELOPMENT_TEAM = 4RU7C2285D;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -287,7 +315,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KevinLima.Bookshelf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,8 +330,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Bookshelf/Bookshelf.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Bookshelf/Preview Content\"";
 				DEVELOPMENT_TEAM = 4RU7C2285D;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -325,7 +357,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KevinLima.Bookshelf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
