@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BookRow: View {
-    var book: Book
+    @Binding var book: Book
     
     var body: some View {
         VStack {
@@ -39,7 +39,16 @@ struct BookRow: View {
 }
 
 struct BookRow_Previews: PreviewProvider {
+    struct StateFullWrapper: View {
+        @State private var testBook = Book.example
+        
+        var body: some View {
+            BookRow(book: $testBook)
+        }
+    }
+    
     static var previews: some View {
-        BookRow(book: Book.example)
+        StateFullWrapper()
+        StateFullWrapper().preferredColorScheme(.dark)
     }
 }

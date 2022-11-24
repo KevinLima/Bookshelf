@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7EC93C3F292A88E3001FB96E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC93C3E292A88E3001FB96E /* Book.swift */; };
-		7EC93C41292A8A61001FB96E /* Book + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC93C40292A8A61001FB96E /* Book + SwiftUI.swift */; };
+		7E714202292FD041003B991B /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 7E714201292FD041003B991B /* Data */; };
+		7E714206292FD188003B991B /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 7E714205292FD188003B991B /* Models */; };
 		7EFE460628FB032400F73E30 /* BookshelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE460528FB032400F73E30 /* BookshelfApp.swift */; };
 		7EFE460828FB032400F73E30 /* BookshelfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFE460728FB032400F73E30 /* BookshelfView.swift */; };
 		7EFE460A28FB032500F73E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFE460928FB032500F73E30 /* Assets.xcassets */; };
@@ -18,8 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7EC93C3E292A88E3001FB96E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		7EC93C40292A8A61001FB96E /* Book + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book + SwiftUI.swift"; sourceTree = "<group>"; };
+		7E714201292FD041003B991B /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		7E714205292FD188003B991B /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		7EFE460228FB032400F73E30 /* Bookshelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookshelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFE460528FB032400F73E30 /* BookshelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfApp.swift; sourceTree = "<group>"; };
 		7EFE460728FB032400F73E30 /* BookshelfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfView.swift; sourceTree = "<group>"; };
@@ -41,15 +41,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7EC93C3D292A88B6001FB96E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7EC93C3E292A88E3001FB96E /* Book.swift */,
-				7EC93C40292A8A61001FB96E /* Book + SwiftUI.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		7EFE45F928FB032400F73E30 = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +64,8 @@
 				7EFE460728FB032400F73E30 /* BookshelfView.swift */,
 				7EFE461428FB043C00F73E30 /* BookRow.swift */,
 				7EFE461628FB057E00F73E30 /* BookDetailView.swift */,
-				7EC93C3D292A88B6001FB96E /* Models */,
+				7E714205292FD188003B991B /* Models */,
+				7E714201292FD041003B991B /* Data */,
 				7EFE460928FB032500F73E30 /* Assets.xcassets */,
 				7EFE460B28FB032500F73E30 /* Bookshelf.entitlements */,
 				7EFE460C28FB032500F73E30 /* Preview Content */,
@@ -149,6 +141,8 @@
 			files = (
 				7EFE460E28FB032500F73E30 /* Preview Assets.xcassets in Resources */,
 				7EFE460A28FB032500F73E30 /* Assets.xcassets in Resources */,
+				7E714206292FD188003B991B /* Models in Resources */,
+				7E714202292FD041003B991B /* Data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,11 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EC93C41292A8A61001FB96E /* Book + SwiftUI.swift in Sources */,
 				7EFE461728FB057F00F73E30 /* BookDetailView.swift in Sources */,
 				7EFE460828FB032400F73E30 /* BookshelfView.swift in Sources */,
 				7EFE460628FB032400F73E30 /* BookshelfApp.swift in Sources */,
-				7EC93C3F292A88E3001FB96E /* Book.swift in Sources */,
 				7EFE461528FB043C00F73E30 /* BookRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +281,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Bookshelf/Bookshelf.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -331,6 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Bookshelf/Bookshelf.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;

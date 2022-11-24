@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BookDetailView: View {
-    var book: Book
+    @Binding var book: Book
     
     var body: some View {
         ScrollView (){
@@ -87,14 +87,22 @@ struct InfoList: View {
 }
 
 struct BookDetailView_Previews: PreviewProvider {
+    struct StatefulWrapper : View {
+        @State private var testBook = Book.example
+        
+        var body: some View {
+            BookDetailView(book: $testBook)
+        }
+    }
+    
     static var previews: some View {
         Group{
             NavigationView {
-                BookDetailView(book: .example)
+                StatefulWrapper()
             }
             
             NavigationView {
-                BookDetailView(book: .example)
+                StatefulWrapper()
                     .preferredColorScheme(.dark)
             }
         }

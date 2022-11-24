@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct BookshelfApp: App {
+    private var bookDataManager = BookDataManager()
+    @State private var books =  Book.testData
+    
     var body: some Scene {
         WindowGroup {
-            BookshelfView()
+            BookshelfView(books: $books)
+                .onAppear{
+                    bookDataManager.load(completion: { books in
+                        self.books = books
+                    })
+                }
         }
     }
 }
