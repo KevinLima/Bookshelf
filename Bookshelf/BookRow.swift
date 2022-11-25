@@ -21,7 +21,7 @@ struct BookRow: View {
                 VStack(alignment: .leading) {
                     Text(book.title)
                         .font(.headline)
-                    Spacer()
+                
                     VStack (alignment: .leading) {
                         Label(book.author, systemImage: "person.fill")
                         Label("\(book.formattedPrecemtComplete) complete", systemImage: "percent")
@@ -29,12 +29,12 @@ struct BookRow: View {
                     }
                     .font(.callout)
                     .foregroundColor(.accentColor)
-                    
+                    Spacer()
                 }
                 .frame(height: 110)
                 Spacer()
             }
-        }.padding(.trailing)
+        }
     }
 }
 

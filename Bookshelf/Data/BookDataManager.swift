@@ -2,52 +2,50 @@
 //  BookDataManager.swift
 //  Bookshelf
 //
-//  Created by Kevin Lima on 24/11/2022.
+//  Created by Kevin Lima on 25/11/2022.
 //
 
 import Foundation
 
-struct BookDataManager: Codable {
+struct BookDataManager {
     
-    func load(completion: @escaping ([Book]) -> Void) {
+    func load(completion: @escaping ([Book]) -> Void){
         DispatchQueue.global(qos: .background).async {
             
-            // Copy the book.json file to the user's documents folder, if its not already there
+            // Copy the books.json file to the user's document folder, if its not already there
             // You should never save files back to the application bundle directory, so make an initial copy
-            
             if FileManager.default.fileExists(atPath: Self.fileURL.path) == false {
-                let bundleProjectsURL = Bundle.main.url(forResource: "books", withExtension: "json")!
-                try! FileManager.default.copyItem(at: bundleProjectsURL, to: Self.fileURL)
+                let bundleBooksURL = Bundle.main.url(forResource: "books", withExtension: "json")!
+                try! FileManager.default.copyItem(at: bundleBooksURL, to: Self.fileURL)
             }
             
-            // Read the users book json file that is in the documents folder
+            // Read the users book file that is in the document folder
             guard let data = try? Data(contentsOf: Self.fileURL) else {
                 return
             }
             
+            // Attempt to decode the JSON document into an array of Books
             let decoder = JSONDecoder()
             
-            // Attempt to decode the JSON document into an array of Book
             guard let books = try? decoder.decode([Book].self, from: data) else {
-                fatalError("Can't decode saved books data")
+                fatalError("Cannot decode the saved books data")
             }
             
-            // Pass the array of books back to the caller
+            // Pass the array of the Book back to the caller through the completion handler that its passed in
             DispatchQueue.main.async {
                 completion(books)
             }
-            
         }
     }
+    
     
     // MARK: Helper functions
     private static var documentsFolder: URL {
         do {
-            return try FileManager.default.url(
-                for: .documentDirectory,
-                in: .userDomainMask,
-                appropriateFor: nil,
-                create: false)
+            return try FileManager.default.url(for: .documentDirectory,
+                                               in: .userDomainMask,
+                                               appropriateFor: nil,
+                                               create: false)
         } catch {
             fatalError("Can't find documents directory.")
         }

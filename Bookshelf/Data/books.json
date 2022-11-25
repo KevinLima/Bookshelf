@@ -1,22 +1,22 @@
 [
     {
-        "ISDN": 2233,
+        "ISDN": 1233,
         "title": "Harry Potter and the Philosopher's Stone",
         "author": "J.K. Rowling",
         "genre": "Fantasy",
         "pageCount": 223,
         "progression": 122,
         "coverImage": "potter",
-        "releaseYear": "2001",
+        "releaseYear": "2001"
     },
     {
-        "ISDN": 33311,
+        "ISDN": 3333,
         "title": "The Bitcoin Standard",
         "author": "Saifedean Ammous",
         "genre": "Non-fiction",
         "pageCount": 304,
         "progression": 122,
         "coverImage": "bitcoin",
-        "releaseYear": "2018",
+        "releaseYear": "2018"
     },
 ]
