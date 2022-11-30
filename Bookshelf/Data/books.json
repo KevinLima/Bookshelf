@@ -7,7 +7,7 @@
         "pageCount": 223,
         "progression": 122,
         "coverImage": "potter",
-        "releaseYear": "2001"
+        "releaseYear": 2001,
     },
     {
         "ISDN": 3333,
@@ -17,6 +17,6 @@
         "pageCount": 304,
         "progression": 122,
         "coverImage": "bitcoin",
-        "releaseYear": "2018"
+        "releaseYear": 2018,
     },
 ]

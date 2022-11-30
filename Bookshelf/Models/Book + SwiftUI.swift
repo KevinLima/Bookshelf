@@ -40,7 +40,7 @@ extension Book {
         pageCount: 223,
         progression: 122,
         coverImage: "potter",
-        releaseYear: "2001"
+        releaseYear: 2001
     )
     
     static var testData = [example]

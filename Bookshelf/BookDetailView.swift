@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BookDetailView: View {
     @Binding var book: Book
+    @State private var showEdit = false
+    @State private var bookForEdititng = Book()
     
     var body: some View {
         ScrollView (){
@@ -17,6 +19,29 @@ struct BookDetailView: View {
             Controls()
             InfoList(book: book)
             Spacer()
+        }
+        .navigationBarItems(
+            trailing: Button(action: {
+                bookForEdititng = book
+                showEdit = true
+            }, label: {
+                Text("Edit")
+            })
+        )
+        .sheet(isPresented: $showEdit) {
+            NavigationView {
+                EditBookView(book: $bookForEdititng)
+                    .navigationBarItems(leading: Button(action: {
+                        showEdit = false
+                    }, label: {
+                        Text("Cancel")
+                    }), trailing: Button(action: {
+                        showEdit = false
+                        self.book = bookForEdititng
+                    }, label: {
+                        Text("Done")
+                    }))
+            }
         }
     }
 }
@@ -46,7 +71,8 @@ struct Header: View {
                 .font(.headline)
                 .foregroundColor(.accentColor)
             
-            Text("\(book.genre) - \(book.releaseYear)")
+            let release = String(book.releaseYear) // to prevent comma in the number
+            Text("\(book.genre) - \(release)")
                 .font(.footnote)
                 .foregroundColor(.gray)
         }
@@ -56,13 +82,7 @@ struct Header: View {
 struct Controls: View {
     var body: some View {
         HStack {
-            Button("Bookmark") {
-            }
-            .padding(EdgeInsets(top: 20, leading: 50, bottom: 20, trailing: 50))
-            .background(Color(red: 4.7, green: 7, blue: 7, opacity: 0.02))
-            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-            
-            Button("Complete") {
+            Button("Update progress") {
             }
             .padding(EdgeInsets(top: 20, leading: 50, bottom: 20, trailing: 50))
             .background(Color(red: 4.7, green: 7, blue: 7, opacity: 0.02))
