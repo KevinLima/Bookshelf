@@ -9,12 +9,12 @@ import Foundation
 import SwiftUI
 
 struct Book: Codable {
-    var ISDN: Int = 0
+    var bookId: String = UUID().uuidString
     var title: String = ""
     var author: String = ""
     var genre: String = ""
-    var pageCount: Int = 0
-    var progression: Int = 0
-    var coverImage: String = ""
-    var releaseYear: Int = 0
+    var pageCount: Int = 10
+    var progression: Int = 1
+    var coverImage: String = "default"
+    var releaseYear: Int = 1900
 }

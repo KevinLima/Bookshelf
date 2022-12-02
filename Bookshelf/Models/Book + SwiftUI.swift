@@ -33,7 +33,7 @@ extension Book {
     }
     
     static var example = Book(
-        ISDN: 1233,
+        bookId: "999",
         title: "Harry Potter and the Philosopher's Stone",
         author: "J.K. Rowling",
         genre: "Fantasy",
@@ -47,7 +47,7 @@ extension Book {
 }
 
 extension Book: Identifiable {
-    var id: Int {
-        self.ISDN
+    var id: String {
+        self.bookId
     }
 }

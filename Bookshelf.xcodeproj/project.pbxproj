@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E38A47F293A565B00DC9DBE /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E38A47E293A565B00DC9DBE /* AddBookView.swift */; };
 		7E504D892930EC65002AE819 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E504D882930EC65002AE819 /* books.json */; };
 		7E504D8B2930EDB2002AE819 /* BookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E504D8A2930EDB2002AE819 /* BookDataManager.swift */; };
 		7E70EDDE292FDB8600532634 /* Book + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70EDDC292FDB7F00532634 /* Book + SwiftUI.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E38A47E293A565B00DC9DBE /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		7E504D882930EC65002AE819 /* books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
 		7E504D8A2930EDB2002AE819 /* BookDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataManager.swift; sourceTree = "<group>"; };
 		7E70EDDC292FDB7F00532634 /* Book + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book + SwiftUI.swift"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				7EFE461428FB043C00F73E30 /* BookRow.swift */,
 				7EFE461628FB057E00F73E30 /* BookDetailView.swift */,
 				7EF346A5293793ED00DB84F5 /* EditBookView.swift */,
+				7E38A47E293A565B00DC9DBE /* AddBookView.swift */,
 				7E70EDEC292FDD5D00532634 /* Data */,
 				7E70EDDB292FDB7F00532634 /* Models */,
 				7EFE460928FB032500F73E30 /* Assets.xcassets */,
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E70EDDE292FDB8600532634 /* Book + SwiftUI.swift in Sources */,
+				7E38A47F293A565B00DC9DBE /* AddBookView.swift in Sources */,
 				7EF346A6293793ED00DB84F5 /* EditBookView.swift in Sources */,
 				7E504D8B2930EDB2002AE819 /* BookDataManager.swift in Sources */,
 				7EFE461728FB057F00F73E30 /* BookDetailView.swift in Sources */,

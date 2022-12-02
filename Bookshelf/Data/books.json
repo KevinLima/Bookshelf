@@ -1,6 +1,6 @@
 [
     {
-        "ISDN": 1233,
+        "bookId": "1233",
         "title": "Harry Potter and the Philosopher's Stone",
         "author": "J.K. Rowling",
         "genre": "Fantasy",
@@ -10,7 +10,7 @@
         "releaseYear": 2001,
     },
     {
-        "ISDN": 3333,
+        "bookId": "3333",
         "title": "The Bitcoin Standard",
         "author": "Saifedean Ammous",
         "genre": "Non-fiction",

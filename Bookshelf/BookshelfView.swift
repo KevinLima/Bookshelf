@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BookshelfView: View {
     @Binding var books: [Book]
+    @State var showAddNew = false
+    @State var newBook: Book = Book()
     
     var body: some View {
         NavigationView {
@@ -22,10 +24,31 @@ struct BookshelfView: View {
                         label: { BookRow(book: bookBinding) }
                     )
                 }
-                
             }
             .listStyle(.plain)
             .navigationTitle("Bookshelf")
+            .navigationBarItems(trailing: Button(action: {
+                showAddNew = true
+            }, label: {
+                Text("Add")
+            }))
+            .sheet(isPresented: $showAddNew) {
+                NavigationView {
+                    AddBookView(newBook: $newBook)
+                        .navigationBarItems(leading: Button(action: {
+                            newBook = Book()
+                            showAddNew = false
+                        }, label: {
+                            Text("Cancel")
+                        }), trailing: Button(action: {
+                            showAddNew = false
+                            self.books.append(newBook)
+                            newBook = Book()
+                        }, label: {
+                            Text("Done")
+                        }))
+                }
+            }
         }
     }
 }
@@ -33,14 +56,22 @@ struct BookshelfView: View {
 struct ContentView_Previews: PreviewProvider {
     struct StatefullWrapper: View {
         @State private var testBooks = Book.testData
+        @State private var testBook = Book.example
         
         var body: some View {
-            BookshelfView(books: $testBooks)
+            BookshelfView(books: $testBooks, newBook: testBook)
         }
     }
     
     static var previews: some View {
-        StatefullWrapper()
-        StatefullWrapper().preferredColorScheme(.dark)
+        Group {
+            NavigationView {
+                StatefullWrapper()
+            }
+            NavigationView {
+                StatefullWrapper()
+                    .preferredColorScheme(.dark)
+            }
+        }
     }
 }
