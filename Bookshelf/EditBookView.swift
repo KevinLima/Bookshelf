@@ -34,5 +34,7 @@ struct EditBookView_Previews: PreviewProvider {
     
     static var previews: some View {
         StatefullWrapper()
+        StatefullWrapper()
+            .preferredColorScheme(.dark)
     }
 }

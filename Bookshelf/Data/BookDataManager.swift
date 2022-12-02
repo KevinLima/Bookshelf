@@ -38,6 +38,24 @@ struct BookDataManager {
         }
     }
     
+    func save(books: [Book]){
+        DispatchQueue.global(qos: .background).async {
+            let encoder = JSONEncoder()
+            
+            // attempt to encode the array of books into a json document
+            guard let bookData = try? encoder.encode(books) else {
+                fatalError("Error encoding the books data")
+            }
+            
+            do {
+                // write the encoded json file to the users documents folder
+                let outfile = Self.fileURL
+                try bookData.write(to: outfile)
+            } catch {
+                fatalError("Can't write to file")
+            }
+        }
+    }
     
     // MARK: Helper functions
     private static var documentsFolder: URL {

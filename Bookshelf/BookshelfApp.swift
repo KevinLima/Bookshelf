@@ -11,6 +11,7 @@ import SwiftUI
 struct BookshelfApp: App {
     private var bookDataManager = BookDataManager()
     @State private var books =  Book.testData
+    @Environment (\.scenePhase) private var scenePhase
     
     var body: some Scene {
         WindowGroup {
@@ -19,6 +20,9 @@ struct BookshelfApp: App {
                     bookDataManager.load(completion: { books in
                         self.books = books
                     })
+                }
+                .onChange(of: scenePhase) { phase in
+                    bookDataManager.save(books: self.books)
                 }
         }
     }
