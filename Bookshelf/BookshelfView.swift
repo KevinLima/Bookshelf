@@ -16,7 +16,7 @@ struct BookshelfView: View {
         NavigationView {
             List {
                 ForEach(books) { book in
-                    let bookIndex = books.firstIndex(where: {$0.id == book.id})!
+                    let bookIndex = books.firstIndex(where: {$0.bookId == book.bookId})!
                     let bookBinding = $books[bookIndex]
                     
                     NavigationLink (
