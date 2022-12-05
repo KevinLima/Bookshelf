@@ -16,7 +16,7 @@ struct BookDetailView: View {
         ScrollView (){
             Cover(book: book)
             Header(book: book)
-            Controls()
+            ProgressUpdate(book: $book)
             InfoList(book: book)
             Spacer()
         }
@@ -79,14 +79,37 @@ struct Header: View {
     }
 }
 
-struct Controls: View {
+struct ProgressUpdate: View {
+    @State private var showUpdate = false
+    @Binding var book: Book
+    @State var bookForUpdating = Book()
+    
     var body: some View {
         HStack {
-            Button("Update progress") {
-            }
+            Button(action: {
+                bookForUpdating = book
+                showUpdate = true
+            }, label: {
+                Text("Update progress")
+            })
             .padding(EdgeInsets(top: 20, leading: 50, bottom: 20, trailing: 50))
             .background(Color(red: 4.7, green: 7, blue: 7, opacity: 0.02))
             .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+            .sheet(isPresented: $showUpdate) {
+                NavigationView {
+                    UpdateBookProgress(book: $bookForUpdating)
+                        .navigationBarItems(leading: Button(action: {
+                            showUpdate = false
+                        }, label: {
+                            Text("Cancel")
+                        }), trailing: Button(action: {
+                            book = bookForUpdating
+                            showUpdate = false
+                        }, label: {
+                            Text("Done")
+                        }))
+                }
+            }
         }
     }
 }
