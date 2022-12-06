@@ -24,10 +24,8 @@ struct EditBookView: View {
                     .autocorrectionDisabled(true)
                 TextField("Release year", value: $book.releaseYear, formatter: NumberFormatter())
                     .keyboardType(.numberPad)
-                    .autocorrectionDisabled(true)
                 TextField("Page count", value: $book.pageCount, formatter: NumberFormatter())
                     .keyboardType(.numberPad)
-                    .autocorrectionDisabled(true)
             }
         }
     }

@@ -14,6 +14,7 @@ struct UpdateBookProgress: View {
         Form {
             Section("Progress") {
                 TextField("Page number", value: $book.progression, formatter: NumberFormatter())
+                    .keyboardType(.numberPad)
             }
         }
     }
