@@ -14,10 +14,20 @@ struct EditBookView: View {
         Form {
             Section("Edit book") {
                 TextField("Book title", text: $book.title)
+                    .keyboardType(.default)
+                    .autocorrectionDisabled(true)
                 TextField("Author", text: $book.author)
+                    .keyboardType(.default)
+                    .autocorrectionDisabled(true)
                 TextField("Genre", text: $book.genre)
+                    .keyboardType(.default)
+                    .autocorrectionDisabled(true)
                 TextField("Release year", value: $book.releaseYear, formatter: NumberFormatter())
+                    .keyboardType(.numberPad)
+                    .autocorrectionDisabled(true)
                 TextField("Page count", value: $book.pageCount, formatter: NumberFormatter())
+                    .keyboardType(.numberPad)
+                    .autocorrectionDisabled(true)
             }
         }
     }

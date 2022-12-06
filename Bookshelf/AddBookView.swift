@@ -33,8 +33,8 @@ struct AddBookView_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-       StatefullWrapper()
-       StatefullWrapper()
+        StatefullWrapper()
+        StatefullWrapper()
             .preferredColorScheme(.dark)
     }
 }
