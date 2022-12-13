@@ -120,12 +120,20 @@ struct InfoList: View {
     
     var body: some View {
         List {
-            Text("Current page: \(book.progression)")
-            Text("Pages left: \(book.pagesLeftToRead)")
-            Text("Precent compete: \(book.formattedPrecemtComplete)")
-            Text("Total pages: \(book.pageCount)")
+            PercentProgressRow(
+                displayName: "Progress",
+                formattedValue: book.formattedPrecemtComplete,
+                metricName: "Completed"
+            )
+            PagesProgressRow(
+                value: book.progression,
+                total: book.pageCount,
+                displayName: "Progress",
+                metricName: "Pages"
+            )
+            LastTimeReadRow(value: "12 October 2022", displayName: "Last time read")
         }
-        .frame(minHeight: minRowHeight * 5)
+        .frame(minHeight: minRowHeight * 6)
     }
 }
 

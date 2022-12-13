@@ -38,7 +38,7 @@ extension Book {
         author: "J.K. Rowling",
         genre: "Fantasy",
         pageCount: 223,
-        progression: 222,
+        progression: 22,
         coverImage: "potter",
         releaseYear: 2001
     )

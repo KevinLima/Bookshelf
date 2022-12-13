@@ -10,6 +10,9 @@
 		7E38A47F293A565B00DC9DBE /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E38A47E293A565B00DC9DBE /* AddBookView.swift */; };
 		7E504D892930EC65002AE819 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E504D882930EC65002AE819 /* books.json */; };
 		7E504D8B2930EDB2002AE819 /* BookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E504D8A2930EDB2002AE819 /* BookDataManager.swift */; };
+		7E566BA52948C0730090F381 /* PagesProgressRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E566BA42948C0730090F381 /* PagesProgressRow.swift */; };
+		7E566BA72948D7620090F381 /* PercentProgressRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E566BA62948D7620090F381 /* PercentProgressRow.swift */; };
+		7E566BA92948DC9A0090F381 /* LastTimeReadRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E566BA82948DC9A0090F381 /* LastTimeReadRow.swift */; };
 		7E63F74F293E4A1C0036790C /* UpdateBookProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E63F74E293E4A1C0036790C /* UpdateBookProgress.swift */; };
 		7E70EDDE292FDB8600532634 /* Book + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70EDDC292FDB7F00532634 /* Book + SwiftUI.swift */; };
 		7E70EDDF292FDB8A00532634 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70EDDD292FDB7F00532634 /* Book.swift */; };
@@ -37,6 +40,9 @@
 		7E38A47E293A565B00DC9DBE /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		7E504D882930EC65002AE819 /* books.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
 		7E504D8A2930EDB2002AE819 /* BookDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataManager.swift; sourceTree = "<group>"; };
+		7E566BA42948C0730090F381 /* PagesProgressRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesProgressRow.swift; sourceTree = "<group>"; };
+		7E566BA62948D7620090F381 /* PercentProgressRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentProgressRow.swift; sourceTree = "<group>"; };
+		7E566BA82948DC9A0090F381 /* LastTimeReadRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastTimeReadRow.swift; sourceTree = "<group>"; };
 		7E63F74E293E4A1C0036790C /* UpdateBookProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateBookProgress.swift; sourceTree = "<group>"; };
 		7E70EDDC292FDB7F00532634 /* Book + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book + SwiftUI.swift"; sourceTree = "<group>"; };
 		7E70EDDD292FDB7F00532634 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
@@ -125,6 +131,9 @@
 				7EF346A5293793ED00DB84F5 /* EditBookView.swift */,
 				7E38A47E293A565B00DC9DBE /* AddBookView.swift */,
 				7E63F74E293E4A1C0036790C /* UpdateBookProgress.swift */,
+				7E566BA42948C0730090F381 /* PagesProgressRow.swift */,
+				7E566BA62948D7620090F381 /* PercentProgressRow.swift */,
+				7E566BA82948DC9A0090F381 /* LastTimeReadRow.swift */,
 				7E70EDEC292FDD5D00532634 /* Data */,
 				7E70EDDB292FDB7F00532634 /* Models */,
 				7EFE460928FB032500F73E30 /* Assets.xcassets */,
@@ -252,6 +261,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E70EDDE292FDB8600532634 /* Book + SwiftUI.swift in Sources */,
+				7E566BA72948D7620090F381 /* PercentProgressRow.swift in Sources */,
+				7E566BA92948DC9A0090F381 /* LastTimeReadRow.swift in Sources */,
 				7E38A47F293A565B00DC9DBE /* AddBookView.swift in Sources */,
 				7E63F74F293E4A1C0036790C /* UpdateBookProgress.swift in Sources */,
 				7EF346A6293793ED00DB84F5 /* EditBookView.swift in Sources */,
@@ -260,6 +271,7 @@
 				7E70EDDF292FDB8A00532634 /* Book.swift in Sources */,
 				7EFE460828FB032400F73E30 /* BookshelfView.swift in Sources */,
 				7EFE460628FB032400F73E30 /* BookshelfApp.swift in Sources */,
+				7E566BA52948C0730090F381 /* PagesProgressRow.swift in Sources */,
 				7EFE461528FB043C00F73E30 /* BookRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
